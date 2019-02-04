@@ -1,0 +1,33 @@
+# Copy and edit this file with your informatin
+
+# AWS Credentials
+aws_access_key = "YourAWSAccessKey"
+aws_secret_key = "YourAWSSecretKey"
+
+# Namespace, which could be your organization name or abbreviation, e.g. "co" or "company"
+namespace = "co"
+# Stage, e.g. "prod", "staging", "dev"
+stage = "dev"
+
+# Where to deploy the infrastructure
+region = "us-east-1"
+vpc = "vpc-xxxxxxxx"
+subnets = ["subnet-xxxxxxxx", "subnet-yyyyyyyy"]
+
+# RabbitMQ Version (3.7.x)
+rabbitmq_version = "3.7.11"
+
+# RabbitMQ instance type
+instance_type = "t3.small"
+
+# RabbitMQ cluster size
+instance_count = 2
+
+# Root block volume size
+storage_size = 10
+
+# Allow loggin in the instance using you ssh key pair. The private key
+# will be used by Ansible to manage the instances.
+# https://console.aws.amazon.com/ec2/v2/home?#KeyPairs
+ssh_key_pair = "terraform"
+
