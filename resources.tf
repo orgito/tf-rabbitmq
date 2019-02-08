@@ -41,8 +41,20 @@ resource "aws_autoscaling_group" "rabbitmq" {
   }
 
   tag {
+    key                 = "Role"
+    value               = "rabbitmq"
+    propagate_at_launch = true
+  }
+
+  tag {
     key                 = "Provision"
     value               = "terraform"
+    propagate_at_launch = true
+  }
+
+  tag {
+    key                 = "Inventory"
+    value               = "ansible"
     propagate_at_launch = true
   }
 }
